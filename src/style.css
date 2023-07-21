@@ -1,0 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: radial-gradient(circle, #ff88a4, #fdd2dc 400px, #e2f8ff);
+    min-height: 100vh;
+}
