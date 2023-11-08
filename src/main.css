@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Bagel+Fat+One&family=Cormorant+Infant&family=Cormorant+SC:wght@500&family=Libre+Caslon+Display&family=Wix+Madefor+Display&family=Ysabeau+Infant&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Onest&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Bagel+Fat+One&family=Cormorant+Infant&family=Cormorant+SC:wght@500&family=Libre+Caslon+Display&family=Wix+Madefor+Display&family=Ysabeau+Infant&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geologica&family=Gideon+Roman&family=Gloock&family=Pixelify+Sans&family=Playfair:opsz@5..1200&family=Ysabeau+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Ubuntu+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 * {
   padding: 0;
   margin: 0;
