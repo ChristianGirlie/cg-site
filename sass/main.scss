@@ -112,21 +112,44 @@ header {
 	z-index: 999;
 
 	nav {
-		display: flex;
-		justify-content: space-between;
 		padding: 5px 10px;
 		background-color: #fdd2dc;
 		border-bottom: 1px #ff88a4 solid;
 
-		ul {
+		.desktop-nav {
 			display: flex;
-			gap: 20px;
-			align-items: center;
-			list-style: none;
-			font-size: 0.9rem;
-			font-weight: bold;
-			padding-right: 10px;
+			justify-content: space-between;
+			ul {
+				display: flex;
+				gap: 20px;
+				align-items: center;
+				list-style: none;
+				font-size: 0.9rem;
+				font-weight: bold;
+				padding-right: 10px;
+			}
 		}
+
+        .mobile-nav {
+            .main-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px;
+
+                i {
+                    font-size: 1.5rem;
+                    
+                    &:hover, &:active {
+                        color: #ff88a4;
+                    }
+                }
+            }
+
+            .hidden-nav {
+                
+            }
+        }
 
 		.dots {
 			display: flex;
@@ -155,9 +178,9 @@ header {
 		text-align: center;
 	}
 
-    section {
-        margin-bottom: 20px;
-    }
+	section {
+		margin-bottom: 20px;
+	}
 
 	.projects-grid-container {
 		width: 100%;
@@ -173,7 +196,7 @@ header {
 		position: relative;
 		justify-items: center;
 
-        @include grid-center-last(2);
+		@include grid-center-last(2);
 
 		.project-card {
 			background: rgb(255, 255, 255);
@@ -329,5 +352,31 @@ header {
 				text-shadow: 0 0 3px #831e35;
 			}
 		}
+	}
+}
+
+//  Responsiveness styles
+/* Phones */
+@media screen and (max-width: 500px) {
+    .desktop-nav  {
+        display: none !important;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 501px) and (max-width: 767px) {
+}
+
+/* Small Screens - Laptop & Computer */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+	.mobile-nav {
+		display: none !important;
+	}
+}
+
+/* Large Screens - Laptop & Computer */
+@media screen and (min-width: 1201px) {
+	.mobile-nav {
+		display: none !important;
 	}
 }

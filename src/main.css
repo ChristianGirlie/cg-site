@@ -108,13 +108,15 @@ header {
   z-index: 999;
 }
 header nav {
-  display: flex;
-  justify-content: space-between;
   padding: 5px 10px;
   background-color: #fdd2dc;
   border-bottom: 1px #ff88a4 solid;
 }
-header nav ul {
+header nav .desktop-nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav .desktop-nav ul {
   display: flex;
   gap: 20px;
   align-items: center;
@@ -122,6 +124,18 @@ header nav ul {
   font-size: 0.9rem;
   font-weight: bold;
   padding-right: 10px;
+}
+header nav .mobile-nav .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+header nav .mobile-nav .main-nav i {
+  font-size: 1.5rem;
+}
+header nav .mobile-nav .main-nav i:hover, header nav .mobile-nav .main-nav i:active {
+  color: #ff88a4;
 }
 header nav .dots {
   display: flex;
@@ -312,4 +326,24 @@ header nav .dots .dot:hover {
   background-color: #ef7591;
   color: white;
   text-shadow: 0 0 3px #831e35;
+}
+
+/* Phones */
+@media screen and (max-width: 500px) {
+  .desktop-nav {
+    display: none !important;
+  }
+}
+/* Tablets */
+/* Small Screens - Laptop & Computer */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .mobile-nav {
+    display: none !important;
+  }
+}
+/* Large Screens - Laptop & Computer */
+@media screen and (min-width: 1201px) {
+  .mobile-nav {
+    display: none !important;
+  }
 }/*# sourceMappingURL=main.css.map */
