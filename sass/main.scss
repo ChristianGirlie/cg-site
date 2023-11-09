@@ -60,6 +60,8 @@ body {
 		box-shadow: 0 0 10px rgba(255, 255, 255, 0.594);
 		padding: 40px 50px;
 		overflow: auto;
+		overflow-x: hidden;
+
 	}
 }
 
@@ -134,7 +136,16 @@ header {
 
 	.projects-grid-container {
 		width: 100%;
-        margin-top: 30px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		padding: 30px 0px 10px;
+		row-gap: 40px;
+		overflow-x: visible;
+		overflow: visible;
+		white-space: nowrap;
+		position: relative;
+        justify-items: center;
 
 		.project-card {
 			background: rgb(255, 255, 255);
@@ -142,11 +153,9 @@ header {
 			background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 1) 84%, rgba(255, 239, 243, 1) 100%);
 			background: linear-gradient(180deg, rgba(255, 255, 255, 1) 84%, rgba(255, 239, 243, 1) 100%);
 			box-shadow: 0px 1px 6px #d3d3d3;
-			overflow: hidden;
 			width: 280px;
-            height: 438px !important;
+			height: 438px !important;
 			padding: 10px 10px 20px 10px;
-            
 
 			&:hover {
 				box-shadow: 0px 1px 4px #bbb9b9;
@@ -180,9 +189,11 @@ header {
 				padding: 0 20px;
 				gap: 10px;
 
-                .project-description {
-                    text-align: center;
-                }
+				.project-description {
+					text-align: center;
+					width: 100%;
+					white-space: wrap;
+				}
 
 				.project-btn {
 					border: 1px solid #ef7591;
@@ -211,17 +222,28 @@ header {
 					-o-border-radius: 7px;
 				}
 			}
-            transition: 200ms;
-            -webkit-transition: 200ms;
-            -moz-transition: 200ms;
-            -ms-transition: 200ms;
-            -o-transition: 200ms;
-            border-radius: 40px;
-            -webkit-border-radius: 40px;
-            -moz-border-radius: 40px;
-            -ms-border-radius: 40px;
-            -o-border-radius: 40px;
-}
+			transition: 200ms;
+			-webkit-transition: 200ms;
+			-moz-transition: 200ms;
+			-ms-transition: 200ms;
+			-o-transition: 200ms;
+			border-radius: 40px;
+			-webkit-border-radius: 40px;
+			-moz-border-radius: 40px;
+			-ms-border-radius: 40px;
+			-o-border-radius: 40px;
+		}
+
+		.blurEffect {
+			background: rgb(255, 239, 243);
+			background: -moz-linear-gradient(90deg, rgba(255, 239, 243, 0) 0%, rgba(255, 255, 255, 1) 67%);
+			background: -webkit-linear-gradient(90deg, rgba(255, 239, 243, 0) 0%, rgba(255, 255, 255, 1) 67%);
+			background: linear-gradient(90deg, rgba(255, 239, 243, 0) 0%, rgba(255, 255, 255, 1) 67%);
+			position: absolute;
+			height: 100%;
+			width: 200px;
+			right: -50px;
+		}
 	}
 }
 
