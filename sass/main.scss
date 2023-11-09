@@ -130,26 +130,42 @@ header {
 			}
 		}
 
-        .mobile-nav {
-            .main-nav {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 5px;
+		.mobile-nav {
+            position: relative;
+			.main-nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 5px;
 
-                i {
-                    font-size: 1.5rem;
-                    
-                    &:hover, &:active {
-                        color: #ff88a4;
-                    }
+				i {
+					font-size: 1.5rem;
+
+					&:hover,
+					&:active {
+						color: #ff88a4;
+					}
+				}
+			}
+
+			.hidden-nav {
+				background-color: white;
+                @include flex(column);
+                padding: 10px;
+                margin: 5px 0;
+                gap: 15px;
+				border-radius: 10px;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				-ms-border-radius: 10px;
+				-o-border-radius: 10px;
+
+                &.hide {
+                    position: absolute;
+                    top: -200px;
                 }
-            }
-
-            .hidden-nav {
-                
-            }
-        }
+			}
+		}
 
 		.dots {
 			display: flex;
@@ -358,8 +374,12 @@ header {
 //  Responsiveness styles
 /* Phones */
 @media screen and (max-width: 500px) {
-    .desktop-nav  {
-        display: none !important;
+	.desktop-nav {
+		display: none !important;
+	}
+
+    main {
+        margin-top: 40px;
     }
 }
 

@@ -125,6 +125,9 @@ header nav .desktop-nav ul {
   font-weight: bold;
   padding-right: 10px;
 }
+header nav .mobile-nav {
+  position: relative;
+}
 header nav .mobile-nav .main-nav {
   display: flex;
   justify-content: space-between;
@@ -136,6 +139,25 @@ header nav .mobile-nav .main-nav i {
 }
 header nav .mobile-nav .main-nav i:hover, header nav .mobile-nav .main-nav i:active {
   color: #ff88a4;
+}
+header nav .mobile-nav .hidden-nav {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  margin: 5px 0;
+  gap: 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+header nav .mobile-nav .hidden-nav.hide {
+  position: absolute;
+  top: -200px;
 }
 header nav .dots {
   display: flex;
@@ -332,6 +354,9 @@ header nav .dots .dot:hover {
 @media screen and (max-width: 500px) {
   .desktop-nav {
     display: none !important;
+  }
+  main {
+    margin-top: 40px;
   }
 }
 /* Tablets */
